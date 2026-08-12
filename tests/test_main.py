@@ -1,6 +1,11 @@
 import os
+import sys
 import json
 import pytest
+
+# Add project root directory to Python path so it can find main.py
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import main
 
 @pytest.fixture(autouse=True)
